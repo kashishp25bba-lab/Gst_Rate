@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GST RATE FINDER</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>GST RATE FINDER</h1>
+    <p class="intro">
+      Find the GST rate of a product in seconds. GST RATE FINDER helps businesses,
+      shopkeepers and customers check the product category, GST rate, HSN code and the
+      CGST / SGST / IGST split, with the official government source for every result.
+    </p>
+  </header>
+
+  <main class="container">
+    <form id="search-form" class="search-card" autocomplete="off">
+      <label for="search-input" class="label">Enter a product name</label>
+      <input id="search-input" type="text" list="suggestions" placeholder="e.g. aerated waters" />
+      <datalist id="suggestions"></datalist>
+      <div class="buttons">
+        <button type="submit" class="btn btn-search">Search</button>
+        <button type="button" id="clear-btn" class="btn btn-clear">Clear</button>
+        <button type="button" id="reset-btn" class="btn btn-reset">Reset</button>
+      </div>
+    </form>
+
+    <section id="results" aria-live="polite"></section>
+
+    <p class="note">
+      Official sources:
+      <a href="https://cbic-gst.gov.in/hindi/gst-goods-services-rates.html" target="_blank" rel="noopener">CBIC GST Rates</a>
+      &middot;
+      <a href="https://services.gst.gov.in/services/searchhsnsac" target="_blank" rel="noopener">GST Portal HSN/SAC Search</a>.
+      Rates are shown only after they have been verified against these sources.
+    </p>
+  </main>
+
+  <footer class="footer">GST RATE FINDER &copy; <span id="year"></span></footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
